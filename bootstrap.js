@@ -19,17 +19,17 @@
     var listener = function(event) {
         var window = event.currentTarget;
         var replaceMacros = function(obj, field, date) {
-    var padZero = function(x, n) {
-        var padZeroSub = function(s, i) {
-            if (i <= 0) {
-                return s;
-            } else {
-                return padZeroSub("0" + s, i - 1);
-            }
-        };
-        var s = x.toString();
-        return padZeroSub(s, n - s.length);
-    };
+            var padZero = function(x, n) {
+                var padZeroSub = function(s, i) {
+                    if (i <= 0) {
+                        return s;
+                    } else {
+                        return padZeroSub("0" + s, i - 1);
+                    }
+                };
+                var s = x.toString();
+                return padZeroSub(s, n - s.length);
+            };
             var regexs = [
                 [ /{{{y}}}/g, function(date) {
                     return date.getFullYear().toString();
@@ -67,6 +67,10 @@
                 [ /{{{EEE}}}/g, function(date) {
                     return ["Sun", "Mon", "Tue", "Wed",
                             "Thu", "Fri", "Sat"][date.getDay()];
+                } ],
+                [ /{{{JE}}}/g, function(date) {
+                    return ["日", "月", "火", "水",
+                            "木", "金", "土"][date.getDay()];
                 } ],
                 [ /{{{H}}}/g, function(date) {
                     return date.getHours().toString();

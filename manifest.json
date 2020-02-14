@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Macro Template",
-  "description": "To Apply Macros To Templates",
-  "version": "2.1.1.1",
-  "author": "Nattoheaven",
-  "homepage_url": "https://github.com/nattoheaven/macrotemplate/",
+  "name": "Macro Template L",
+  "description": "To Apply Macros To Templates. fork.",
+  "version": "2.1.2.0",
+  "author": "Nattoheaven/hiromiya-lndbl",
+  "homepage_url": "https://github.com/hiromiya-lndbl/macrotemplate/",
   "legacy": {
     "type": "bootstrap"
   },
   "applications": {
     "gecko": {
-      "id": "macrotemplate@nattoheaven.com",
+      "id": "macrotemplate-f@lndbl.com",
       "strict_min_version": "68.0"
     }
   }
